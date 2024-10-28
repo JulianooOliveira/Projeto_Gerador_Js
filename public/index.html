@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Arquivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Arquivos</h1>
+
+        <div class="box">
+            <h2>Perfumaria Geral</h2>
+            <p>O nome dos arquivos já estão definidos!</p>
+            <form id="form-tabloide" class="form-section">
+                <label>Selecione o arquivo:</label>
+                <input type="file" id="file-tabloide" name="file" required>
+
+                <label>Data inicial:</label>
+                <input type="date" id="start-date" name="start_date">
+
+                <label>Data final:</label>
+                <input type="date" id="end-date" name="end_date">
+
+                <label>Modelo de Arquivo:</label>
+                <select id="model-perfumaria-geral" name="model">
+                    <option value="#">Selecione</option>
+                    <option value="PR">PR</option>
+                    <option value="SC">SC</option>
+                    <option value="PR-SC">PR-SC</option>
+                    <option value="FTP PR">FTP PR</option>
+                    <option value="FTP SC">FTP SC</option>
+                </select>
+
+                <button type="submit" id="generate-trier">Gerar Arquivo Trier</button>
+                <button type="button" id="generate-alpha7">Gerar Arquivo Alpha7</button>
+                <button type="button" id="generate-big">Gerar Arquivo BIG</button>
+                <button type="button" id="generate-all">Gerar Todos os Arquivos</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <h2>Perfumaria Fidelidade</h2>
+            <p>No campo Modelo de Arquivo, selecione o arquivo que deseja gerar!</p>
+            <form id="form-perfumaria" class="form-section">
+                <label>Selecione o arquivo:</label>
+                <input type="file" id="file-perfumaria-fidelidade" name="file-perfumaria-fidelidade" required>
+
+                <label>Modelo de Arquivo:</label>
+                <select id="model-perfumaria" name="model">
+                    <option value="#">Selecione</option>
+                    <option value="PR PERF VB">PR PERF VB</option>
+                    <option value="SC PERF VB">SC PERF VB</option>
+                    <option value="E-DELIVERY">E-DELIVERY</option>
+                </select>
+
+                <button type="submit">Gerar Arquivo de Perfumaria</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <h2>Medicamento Fidelidade</h2>
+            <p>No campo Modelo de Arquivo, selecione o arquivo que deseja gerar!</p>
+            <form id="form-medicamento" class="form-section">
+                <label>Selecione o arquivo:</label>
+                <input type="file" id="file-medicamento-fidelidade" name="file" required>
+
+                <label>Modelo de Arquivo:</label>
+                <select id="model-medicamento" name="model">
+                    <option value="Selecione">Selecione</option>
+                    <option value="PR MED VB">PR MED VB</option>
+                    <option value="SC MED VB">SC MED VB</option>
+                </select>
+
+                <button type="submit">Gerar Arquivo de Medicamento</button>
+            </form>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
